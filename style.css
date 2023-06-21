@@ -164,7 +164,7 @@
   padding: 15px;
   flex: 1 !important;
 }
-.min-h-100{
+.min-h-100 {
   min-height: 100px;
 }
 .wrapper-text {
@@ -185,13 +185,98 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
 }
-.flex-1
-{
-  flex: 1;
+.flex-1 {
+  flex: 1 !important;
 }
-@media screen and (min-height: 1730) {
+.lower-head {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #2f2f2f;
+}
+.green-head {
+  font-weight: 410;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #14a15f;
+}
+.black-head {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.6709px;
+  text-transform: capitalize;
+  color: #000000;
+  opacity: 0.9;
+}
+.gray-text {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: #a5a5a5;
+}
+.blue-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3056a2;
+}
+.black-bold {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #000000;
+}
+.light-head {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #515151;
+}
+.thin-text {
+  font-weight: 300;
+  font-size: 10.186px;
+  color: #5c5c5c;
+}
+.dollar-text {
+  font-family: Edmondsans;
+  font-weight: 420;
+  font-size: 25.4651px;
+  text-transform: capitalize;
+  color: #333333;
+}
+.lower button {
+  outline: none;
+  border: none;
+  padding: 7px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 6px;
+}
+.lower .card-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 18px;
+}
+.lower .card-lower {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 15px;
+  min-width: 430px;
+}
+footer {
+  background: #1662da;
+  height: 44px;
+  margin-top: 35px;
+}
+.payout {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+/* @media screen and (min-height: 1730px) {
   .pet-details .container > div.row:first-child {
     display: grid;
     place-content: center;
   }
-}
+} */
