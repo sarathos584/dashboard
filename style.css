@@ -4,7 +4,8 @@
 }
 @font-face {
   font-family: Edmondsans;
-  src: url(./fonts/EdmondsansRegular_web.ttf);
+  /* src: url(./fonts/EdmondsansRegular_web.ttf); */
+  src: url(./fonts/Fonts/hbo\ family.ttf);
 }
 * {
   margin: 0;
@@ -59,6 +60,13 @@
   color: #ffffff;
 }
 
+#sidebarMenu li {
+  border-radius: 5px;
+}
+#sidebarMenu li a {
+text-decoration: none;
+margin-left: 29px;
+}
 /* Sidebar */
 .sidebar {
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
@@ -78,7 +86,7 @@
 }
 .pet-details .wrapper {
   /* width: 100%; */
-  max-width: 435px;
+  /* max-width: 435px; */
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -176,6 +184,7 @@
   font-size: 14px;
   line-height: 24px;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 .wrapper-count {
   font-weight: 500;
@@ -252,10 +261,10 @@
 .lower button {
   outline: none;
   border: none;
-  padding: 7px 10px;
+  padding: 7px 10px !important;
   font-weight: 700;
   font-size: 12px;
-  color: #ffffff;
+  color: #ffffff !important;
   border-radius: 6px;
 }
 .lower .card-wrapper {
@@ -310,7 +319,7 @@ footer {
 .paybtn {
   border-radius: 5.8px;
   background: #1662da;
-  padding: 4px 14px;
+  padding: 2px 4px;
   color: #fff;
   text-align: center;
   font-size: 12px;
@@ -324,15 +333,37 @@ footer {
 .green-btn{
   outline: none;
     border: none;
-    padding: 7px 10px;
+    padding: 7px 10px !important;
     font-weight: 700;
     font-size: 12px;
-    color: #ffffff;
+    color: #ffffff !important;
     border-radius: 6px;
 }
+
 .btn-wrapper{
   border-radius: 4.704px;
 border: 0.784px solid rgba(0, 0, 0, 0.10);
+padding: 2px 2px;
+}
+.checkbox-area{
+  width: 100%;
+}
+.calender-area{
+width: 100%;
+}
+
+.calender {
+  width: 75%;
+  margin-bottom:2rem ;
+}
+.payout{
+  width: 23.5%;
+}
+.calender-area{
+  order: 2;
+}
+.checkbox-area{
+  order: 1;
 }
 /* @media screen and (min-height: 1730px) {
   .pet-details .container > div.row:first-child {
@@ -348,6 +379,22 @@ border: 0.784px solid rgba(0, 0, 0, 0.10);
 @media screen and (min-width: 1400px) {
   .pet-card {
     flex: 1 !important;
+  }
+ 
+}
+@media screen and (max-width:1400px) {
+  .card-wrapper{
+    width: 48% !important;
+  }
+  .wave{
+    right: -29px;
+  }
+  .calender 
+  {
+    width: 100% !important;
+  }
+  .payout{
+    width: 50%;
   }
 }
 @media screen and (min-width: 1700px) {
@@ -366,6 +413,18 @@ border: 0.784px solid rgba(0, 0, 0, 0.10);
 @media screen and (min-width: 1740px) {
   .card-lower {
     flex: 1 !important;
+  }
+  .checkbox-area{
+    width: 18.65%;
+  }
+  .calender-area{
+  width: 81.35%;
+  }
+  .filter {
+    display: block !important;
+  }
+  .w-nowrap{
+    white-space: nowrap;
   }
 }
 @media screen and (max-width: 1874px) {
