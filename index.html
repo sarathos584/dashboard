@@ -30,7 +30,7 @@
   <body>
     <section class="container-fluid">
       <div class="row">
-        <div class="col-lg-3" style="max-width: 317px">
+        <div class="col-lg-3 .sidebar-width">
           <nav
             id="sidebarMenu"
             class="collapse d-lg-block sidebar collapse bg-white h-100"
@@ -96,7 +96,7 @@
             </div>
           </nav>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-9 dashboard-width">
           <!-- Navbar -->
           <nav
             id="main-navbar"
@@ -155,8 +155,8 @@
           </nav>
           <section class="pet-details container">
             <div class="container">
-              <div class="row justify-content-center" style="gap: 1.5rem">
-                <div class="col-xxl-4 col-xl-6 col-md-12 p-0 card-wrapper">
+              <div class="row justify-between responsive-flex" >
+                <div class="col-xxl-6 col-xl-6 col-md-12 p-0 card-wrapper pet-card">
                   <div class="wrapper cat">
                     <div class="row w-100 h-100 m-0">
                       <div class="col-2 h-100 w-100 p-0">
@@ -196,7 +196,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xxl-4 col-xl-6 col-md-12 p-0 card-wrapper">
+                <div class="col-xxl-6 col-xl-6 col-md-12 p-0 card-wrapper pet-card">
                   <div class="wrapper dog">
                     <div class="row w-100 h-100 m-0">
                       <div class="col-2 h-100 w-100 p-0">
@@ -236,7 +236,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xxl-4 col-xl-6 col-md-12 p-0 card-wrapper">
+                <div class="col-xxl-6 col-xl-6 col-md-12 p-0 card-wrapper pet-card">
                   <div class="wrapper null">
                     <div class="row w-100 h-100 m-0">
                       <div class="col-2 h-100 w-100 p-0">
@@ -278,7 +278,7 @@
           <div class="underline my-3"></div>
           <section class="container sales">
             <div class="row justify-content-center flex-wrap" style="gap: 1rem">
-              <div class="col-xxl-6 col-lg-12 bookings p-2 " style="flex: 1;">
+              <div class="col-xxl-6 col-xl-12 bookings p-2 flex-equal">
                 <div class="card-container p-3 h-100">
                   <h2 class="booking-count m-0 mb-2">
                     the total booking count
@@ -347,7 +347,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xxl-6 col-lg-12 revenue p-2" style="flex: 1;">
+              <div class="col-xxl-6 col-xl-12 revenue p-2 flex-equal" >
                 <div class="card-container p-3 h-100">
                   <h2 class="booking-count m-0 mb-2">Revenue</h2>
                   <div class="d-flex flex-wrap" style="gap: 1rem">
@@ -388,48 +388,140 @@
           </section>
           <section class="calender-payout">
             <div class="container">
-              <div class="row">
-                <div class="col-xxl-9 calender w-75">
+              <div class="row p-0 mt-3">
+                <div class="col-xxl-9 calender w-75 p-2">
                   <div><h2 class="black-bold">Calender</h2></div>
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div class="d-flex">
-                      <img src="./assets/arrow-left.svg" alt="arrow">
-                    <img src="./assets/right-arrow.svg" alt="arrow">
-                    <p class="m-0">Today</p>
+                  <div class="d-flex align-items-center justify-content-between pl-2 mb-2">
+                    <div class="d-inline">
+                      <img class="mr-1" src="./assets/arrow-left.svg" alt="arrow">
+                    <img class="mr-2" src="./assets/right-arrow.svg" alt="arrow">
+                    <p class="m-0 date-btn d-inline">Today</p>
                     </div>
                     <div class="d-flex">
-                      <p class="m-0">month</p>
-                      <p class="m-0">week</p>
-                      <p class="m-0">day</p>
-                      <p class="m-0">List</p>
+                      <p class="m-0 date-btn">month</p>
+                      <p class="m-0 date-btn">week</p>
+                      <p class="m-0 date-btn">day</p>
+                      <p class="m-0 date-btn">List</p>
                       <img src="./assets/dots.svg" alt="dots">
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-xxl-9">
-                      
-                      
+                  <div class="row m-0">
+                    <div class="col-xxl-9 text-center" style="width: 81.35%;">
+                      <img class="w-100" src="./assets/calender-full.png" alt="full calender">
+                    </div>
+                    <div class="col-xxl-3 py-0 px-4" style="width: 18.65%;">
+                      <div class="filter wrapper check-boxes p-2">
+                        <div class="input-field"><input class="align-middle mr-2 inputs"  type="checkbox" name="all" id="all"><label class="check-text  m-0" for="all">All</label></div>
+                        <div class="input-field"><input class="align-middle mr-2 inputs"  type="checkbox" name="dog-boarding" id="dogBoarding"><label class="check-text  m-0" style="color: #5b5b5b;" for="dogBoarding">Dog Boarding</label></div>
+                        <div class="input-field"><input class="align-middle mr-2 inputs"  type="checkbox" name="dog-walking" id="dogWalking"><label  class="check-text  m-0" style="color: #0047ff;" for="dogWalking">Dog Walking</label></div>
+                        <div class="input-field"><input class="align-middle mr-2 inputs"  type="checkbox" name="dog-day-walking" id="dogDayCare"><label  class="check-text  m-0" style="color: #FFC100;" for="dogDayCare">Dog Day Care</label></div>
+                        <div class="input-field"><input class="align-middle mr-2 inputs"  type="checkbox" name="cat-boarding" id="catBoarding"><label  class="check-text  m-0" style="color: #FF00E5;" for="catBoarding">Cat Boarding</label></div>
+                        <div class="input-field"><input class="align-middle mr-2 inputs"  type="checkbox" name="cat-sitting" id="catSitting"><label  class="check-text  m-0" style="color: #00FF57;" for="catSitting">Cat Sitting</label></div>
+                        <div class="input-field"><input class="align-middle mr-2 inputs"  type="checkbox" name="drop-cat" id="dropCat"><label  class="check-text m-0" style="color: #00FFE0;" for="dropCat">Drop In Visit - Cat</label></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-xxl-3 payout">
-
+                <div class="col-xxl-3 payout ml-3 p-2" style="width: 23.5%;">
+                  <div class="d-flex justify-content-between">
+                    <h2 class="lower-head">request payout</h2>
+                    <img src="./assets/dots.svg" alt="dots">
+                  </div>
+                  <div class="card-wrapper mt-3 p-2">
+                    <div class=" row w-100 m-0">
+                      <div class="col-9 p-0">
+                        <div class="profile">
+                          <div class="pro-pic d-flex align-items-center" style="gap: 1rem;">
+                            <img src="./assets/martin.svg" alt="profile pic">
+                            <div>
+                              <p class="m-0 black-bold">mr martin luther</p>
+                              <p class="m-0 light-head">dog walking</p>
+                            </div>
+                          </div>
+                          <p class="gray-text mx-0 mt-2 mb-1">Submitted Date <span class="blue-text ml-1">21-03-2023</span></p>
+                          <p class="gray-text m-0">Subservice type<span class="blue-text ml-1">lorem</span></p>
+                        </div>
+                      </div>
+                      <div class="col-3 p-0">
+                        <div class="price">
+                          <p class="thin-text m-0">price</p>
+                          <h4 class="dollar-text m-0">$600</h4>
+                        </div>
+                        <div class="btn-wrapper p-1">
+                          <button class="paybtn">Payout</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-wrapper mt-3 p-2">
+                    <div class=" row w-100 m-0">
+                      <div class="col-9 p-0">
+                        <div class="profile">
+                          <div class="pro-pic d-flex align-items-center" style="gap: 1rem;">
+                            <img src="./assets/martin.svg" alt="profile pic">
+                            <div>
+                              <p class="m-0 black-bold">mr martin luther</p>
+                              <p class="m-0 light-head">dog walking</p>
+                            </div>
+                          </div>
+                          <p class="gray-text mx-0 mt-2 mb-1">Submitted Date <span class="blue-text ml-1">21-03-2023</span></p>
+                          <p class="gray-text m-0">Subservice type<span class="blue-text ml-1">lorem</span></p>
+                        </div>
+                      </div>
+                      <div class="col-3 p-0">
+                        <div class="price">
+                          <p class="thin-text m-0">price</p>
+                          <h4 class="dollar-text m-0">$600</h4>
+                        </div>
+                        <div class="btn-wrapper p-1">
+                          <button class="paybtn">Payout</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-wrapper mt-3 p-2">
+                    <div class=" row w-100 m-0">
+                      <div class="col-9 p-0">
+                        <div class="profile">
+                          <div class="pro-pic d-flex align-items-center" style="gap: 1rem;">
+                            <img src="./assets/martin.svg" alt="profile pic">
+                            <div>
+                              <p class="m-0 black-bold">mr martin luther</p>
+                              <p class="m-0 light-head">dog walking</p>
+                            </div>
+                          </div>
+                          <p class="gray-text mx-0 mt-2 mb-1">Submitted Date <span class="blue-text ml-1">21-03-2023</span></p>
+                          <p class="gray-text m-0">Subservice type<span class="blue-text ml-1">lorem</span></p>
+                        </div>
+                      </div>
+                      <div class="col-3 p-0">
+                        <div class="price">
+                          <p class="thin-text m-0">price</p>
+                          <h4 class="dollar-text m-0">$600</h4>
+                        </div>
+                        <div class="btn-wrapper p-1">
+                          <button class="paybtn">Payout</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button  class="green-btn" style="background: #14A15F;">Accept</button>
                 </div>
               </div>
             </div>
           </section>
           <section class="lower mt-4">
             <div class="container">
-              <div class="row flex-wrap justify-content-center" style="gap: 1rem;">
-                <div class="col-xxl-4 col-xl-6  col-lg-6 col-md-12 card-lower p-0 pt-3">
+              <div class="row flex-wrap justify-content-between" style="gap: 1rem;">
+                <div class="col-xxl-6 col-xl-6  col-lg-6 col-md-12 card-lower p-0 pt-3">
                   <h2 class="green-head ml-3 mb-5">booking made - <span class="black-head">97.5k</span></h2>
                   <img class="w-100" src="./assets/lower-graph.svg" alt="">
                 </div>
-                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 card-lower justify-content-between">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 card-lower justify-content-between">
                   <h2 class="green-head ml-3 mb-5">Revenue Generated - <span class="black-head">97.5k</span></h2>
-                  <img src="./assets/lower-graph-2.svg" alt="">
+                  <img class="w-100" src="./assets/lower-graph-2.svg" alt="">
                 </div>
-                <div class="col-xxl-4 col-xl-6  col-lg-6 col-md-12 card-lower ">
+                <div class="col-xxl-6 col-xl-6  col-lg-6 col-md-12 card-lower ">
                   <div class="head d-flex justify-content-between"><h2 class="lower-head">Pending Bookings</h2><a class="green-head" href="#">View More</a></div>
                     <div class="card-wrapper">
                       <div class=" row">
